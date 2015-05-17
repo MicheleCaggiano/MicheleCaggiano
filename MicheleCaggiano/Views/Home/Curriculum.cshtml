@@ -1,0 +1,327 @@
+﻿@model MicheleCaggiano.Models.EmailViewModel
+@{
+  ViewBag.Title = "Curriculum";
+}
+<br />
+@*--------PROFILO---------*@
+<div id="curriculum">
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default ">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-2">
+            <img class="img-responsive img-circle" src="~/Content/images/profilo.jpg" />
+          </div>
+          <div class="col-md-10">
+            <h2>Michele Caggiano</h2>
+            <h4>Software developer</h4>
+            <br />
+            <p class="info">
+              <span class="infoLabel">Data di nascita: </span>02/10/1986 |
+              <span class="infoLabel">Email: </span><a href="mailto:info@michelecaggiano.net?subject=Info">info@michelecaggiano.net</a> |
+              <span class="infoLabel">Website: </span><a href="http://www.michelecaggiano.net" target="_blank">http://www.michelecaggiano.net</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @*--------RESUME-------*@
+    <div class="panel panel-default">
+      <a class="text-muted" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        <div class="panel-heading">
+          <div class="flag resume">
+            <i class="fa fa-2x fa-align-left"></i>
+          </div>
+          <div class="highlighter resume"></div>
+          <h4 class="panel-title">
+            RESUME
+          </h4>
+        </div>
+      </a>
+      <div id="collapseTwo" class="panel-collapse collapse panel-resume">
+        <div class="panel-body">
+          <div class="col-md-9">
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <i class="fa fa-caret-down profile"></i>
+                <h3 class="panel-title">ESPERIENZE LAVORATIVE</h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group">
+
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4><i class="fa fa-caret-right profile"></i> Fincons Group</h4>
+                        <p class="text-muted role">.Net Developer</p>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="text-muted pull-right">08/2014 - presente</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p>FINCONS GROUP, realtà di dimensione europea, opera nel mercato dell’ICT dal 1983, come Partner per le aziende che perseguono un allineamento tra strategia di business e i loro sistemi di Information Technology. La proposta al mercato si riassume in: IT Business Consulting, Sviluppo di Soluzioni Core Business, System Integration di prodotti di Vendor Internazionali, Application Management. Un’offerta ad alto valore aggiunto, un fatturato di 50 milioni di euro, oltre 200 clienti ed una presenza capillare in Italia e Svizzera fanno di FINCONS GROUP uno dei principali player del mercato ICT.</p>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4><i class="fa fa-caret-right profile"></i> Code Architects</h4>
+                        <p class="text-muted role">Web Developer</p>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="text-muted pull-right">07/2013 - 07/2014</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p>Code Architects è una software house specializzata in applicazioni di fascia enterprise per l’ambiente Microsoft Windows e Windows Azure, e ha realizzato soluzioni personalizzate per aziende ed enti pubblici in Italia e in tutto il mondo. E’ l’unica azienda italiana accettata nei programmi ISV NXT (Microsoft ISV partner specializzati nella modernizzazione di applicazioni legacy) e VSIP (Visual Studio Industry Partner).</p>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4><i class="fa fa-caret-right profile"></i> Laboratre</h4>
+                        <p class="text-muted role">Web Developer</p>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="text-muted pull-right">09/2012 - 07/2013</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p>Creazione siti internet, comunicazione, web marketing a Bari e Milano.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <i class="fa fa-caret-down portfolio"></i>
+                <h3 class="panel-title">EDUCAZIONE</h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group">
+
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4><i class="fa fa-caret-right portfolio"></i> Laurea specialistica Ing. Informatica: Sistemi informativi e reti</h4>
+                        <p class="text-muted role">Politecnico di Bari</p>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="text-muted pull-right">2009 - 2012</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4><i class="fa fa-caret-right portfolio"></i> Laurea Ing. Informatica</h4>
+                        <p class="text-muted role">Politecnico di Torino</p>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="text-muted pull-right">2006 - 2009</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p>Tesi di laurea: Strumenti per l’analisi di software repository, relatore Prof. Marco Torchiano</p>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4><i class="fa fa-caret-right portfolio"></i> Diploma perito informatico</h4>
+                        <p class="text-muted role">ITIS GB Pentasuglia - Matera</p>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="text-muted pull-right">2000 - 2005</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          @*<div class="col-md-3">
+            <h5>COMPETENZE INFORMATICHE</h5>
+            <h5>COMPETENZE LINGUISTICHE</h5>
+          </div>*@
+        </div>
+      </div>
+    </div>
+
+    @*------PORTFOLIO-------*@
+    <div class="panel panel-default">
+      <a class="text-muted" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <div class="panel-heading">
+          <div class=" flag portfolio">
+            <i class="fa fa-2x fa-suitcase"></i>
+          </div>
+          <div class="highlighter portfolio"></div>
+          <h4 class="panel-title">
+            PORTFOLIO
+          </h4>
+        </div>
+      </a>
+      <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+
+    @*-------CONTATTI-------*@
+    <div class="panel panel-default">
+      <a class="text-muted" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+        <div class="panel-heading">
+          <div class="flag contacts">
+            <i class="fa fa-2x fa-envelope"></i>
+          </div>
+          <div class="highlighter contacts"></div>
+          <h4 class="panel-title">
+            CONTATTI
+          </h4>
+        </div>
+      </a>
+      <div id="collapseFour" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div id="contatti">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <h4>RISPONDERÒ AL PIÙ PRESTO!</h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-8">
+                <div class="well well-sm">
+                  @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                  {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="name">
+                            Nome
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <span class="fa fa-user"></span>
+                            </span>
+                            @Html.TextBoxFor(m => m.Nome, new { @class = "form-control", id = "name", placeholder = "Inserire nome" })
+                          </div>
+                          @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                          <label for="email">
+                            Indirizzo email
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-envelope"></span>
+                            </span>
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Inserire email valida" })
+                          </div>
+                          @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                          <label for="subject">
+                            Oggetto
+                          </label>
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <span class="fa fa-dot-circle-o"></span>
+                            </span>
+                            @Html.TextBoxFor(m => m.Oggetto, new { @class = "form-control", placeholder = "Inserire oggetto" })
+                          </div>
+                          @Html.ValidationMessageFor(model => model.Oggetto, "", new { @class = "text-danger" })
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="name">
+                            Messaggio
+                          </label>
+                          @Html.TextAreaFor(m => m.Messaggio, new { @class = "form-control", rows = "11", cols = "25", placeholder = "Messaggio" })
+                          @Html.ValidationMessageFor(model => model.Messaggio, "", new { @class = "text-danger" })
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary" id="btnContactUs">
+                          <span class="fa fa-send"></span>&nbsp;&nbsp;Invia messaggio
+                        </button>
+                      </div>
+                    </div>
+                  }
+
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h4>Social Network</h4>
+                <p>
+                  <a class="btn btn-primary social-login-btn social-linkedin" href="https://www.linkedin.com/profile/view?id=264640301&trk=nav_responsive_tab_profile"><i class="fa fa-linkedin"></i></a>
+                  <a class="btn btn-primary social-login-btn social-facebook" href="https://www.facebook.com/michele.caggiano.92/about"><i class="fa fa-facebook"></i></a>
+                  <a class="btn btn-primary social-login-btn social-google" href="https://plus.google.com/u/0/102484864881943598581/about"><i class="fa fa-google-plus"></i></a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $("a[data-toggle='collapse']").click(function (e) {
+    var highlighter = $(this).find(".highlighter");
+
+    // Removes old highlighter
+    var oldHighlighter = $(".highlighter.activePanel");
+    oldHighlighter.animate({
+      width: 0
+    }, 500);
+
+    if (!highlighter.hasClass("activePanel")) {
+
+      oldHighlighter.removeClass("activePanel");
+      $("h4.activePanel").removeClass("activePanel");
+
+      // Shows current highlighter
+      var titleTag = $(this).find("h4");
+      titleTag.addClass("activePanel");
+
+      var width = titleTag.width() + 30;
+      highlighter.addClass("activePanel");
+      highlighter.animate({
+        width: width
+      }, 500);
+    }
+    else {
+      oldHighlighter.removeClass("activePanel");
+      $("h4.activePanel").removeClass("activePanel");
+    }
+  });
+</script>
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")
+}

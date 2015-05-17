@@ -1,0 +1,32 @@
+﻿@model MicheleCaggiano.Web.Model.Articolo
+
+@{
+  ViewBag.Title = Model.Titolo;
+}
+
+<article class="row">
+  <header class="col-md-12">
+    @*<time datetime="@Model.DataPubblicazione"></time>*@
+    @*<p>Data pubblicazione: </p>*@
+    <h1>@Html.DisplayFor(modelItem => Model.Titolo)</h1>
+
+    @if (Model.Categorie != null && Model.Categorie.Count > 0)
+    {
+      foreach (var categoria in Model.Categorie)
+      {
+        <small class="label label-default">@Html.DisplayFor(c => categoria.Nome)</small>
+      }
+    }
+    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+      <p>
+        @Html.ActionLink("Modifica", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Cancella", "Delete", new { id = Model.Id })
+      </p>
+    }
+  </header>
+  <div class="col-md-12">
+    @(new HtmlString(Model.Testo))
+  </div>
+</article>
+

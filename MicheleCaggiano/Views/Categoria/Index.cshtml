@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MicheleCaggiano.MongoModel.Categoria>
+
+@{
+    ViewBag.Title = "Gestione categorie";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Nuova categoria", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AuthInfo.Created)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthInfo.Created)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Nome }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Nome }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Nome })
+        </td>
+    </tr>
+}
+
+</table>

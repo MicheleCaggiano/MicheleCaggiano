@@ -1,0 +1,8 @@
+﻿@model MicheleCaggiano.MongoModel.AuthInfo
+
+<div class="form-group">
+  <div class="col-md-10">
+    <p>Creato da: @Html.TextBoxFor(model => model.CreatedBy, new { @readonly= "readonly" })  in data: @Html.TextBoxFor(model => model.Created, new { @readonly = "readonly" })</p>
+    <p>Ultima Modifica di: @Html.TextBoxFor(model => model.ModifiedBy, new { @readonly = "readonly" }) in data: @Html.TextBoxFor(model => model.Modified, new { @readonly = "readonly" })</p>
+  </div>
+</div>

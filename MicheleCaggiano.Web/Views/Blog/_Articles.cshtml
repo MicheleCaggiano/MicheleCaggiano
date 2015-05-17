@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MicheleCaggiano.Web.Model.Articolo>
+
+@{ var pageClass = "page" + ViewBag.Page; }
+
+
+@foreach (var articolo in Model)
+{
+  <article class="@pageClass">
+    <header>
+      @* Data pubblicazione: @articolo.DataPubblicazione*@
+      @*@Html.DisplayFor(modelItem => articolo.AuthInfo.Created)*@
+
+      @*@{ string label = articolo.Pubblicato ? "success" : "warning"; }
+        <span class="label label-@label">@String.Format("{0:dd MMMM}", articolo.AuthInfo.Created)<br />@articolo.AuthInfo.Created.Year</span>*@
+      <div class="title">
+        <a href="@Url.Action("Details", new { id = articolo.Id })">
+          <h2>@Html.DisplayFor(modelItem => articolo.Titolo)</h2>
+        </a>
+
+        @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+        {
+          <p>
+            @Html.ActionLink("Modifica", "Edit", new { id = articolo.Id }) |
+            @Html.ActionLink("Cancella", "Delete", new { id = articolo.Id })
+          </p>
+        }
+      </div>
+    </header>
+    <div class="content">
+      @if (articolo.Testo.Length > 660)
+      {
+        @(new HtmlString(articolo.Testo.Substring(0, 660))) <span>...</span><br /><br />
+
+        @Html.ActionLink("LEGGI ARTICOLO", "Details", new { id = articolo.Id }, new { @class = "btn btn-primary" })
+      }
+      else
+      {
+        @(new HtmlString(articolo.Testo))
+      }
+    </div>
+    @if (articolo.Categorie != null && articolo.Categorie.Count > 0)
+    {
+      foreach (var categoria in articolo.Categorie)
+      {
+        <small class="label label-default">@Html.DisplayFor(c => categoria.Nome)</small>
+      }
+    }
+  </article>
+}

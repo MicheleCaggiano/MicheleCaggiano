@@ -1,0 +1,268 @@
+﻿body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px;
+}
+/*# sourceMappingURL=Site.min.css.map */
+#rightbar {
+  margin-top: 20px;
+}
+article {
+  float: left;
+  margin: 20px 0;
+  width: 100%;
+  background: #FFF;
+  border-bottom: 8px solid #4e5d6c;
+  color: #333333;
+  padding: 20px;
+}
+article header,
+article .content {
+  float: left;
+  width: 100%;
+}
+article header {
+  position: relative;
+  margin-bottom: 20px;
+}
+article header .label:first-child {
+  height: 70px;
+  position: absolute;
+  padding-top: 22px;
+}
+article header .title a {
+  color: #222222;
+}
+article header .title a:hover {
+  text-decoration: none;
+}
+article header .title a h2 {
+  margin-top: 0;
+}
+div.mce-fullscreen {
+  top: 60px !important;
+}
+/*# sourceMappingURL=Site.min.css.map */
+/*# sourceMappingURL=Site.min.css.map */
+.caption div {
+  box-shadow: 0 0 5px #C8C8C8;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+/*# sourceMappingURL=Site.min.css.map */
+/*# sourceMappingURL=Site.min.css.map */
+.social-login-btn {
+  margin: 5px;
+  width: 20%;
+  font-size: 250%;
+  padding: 0;
+}
+.social-google {
+  background-color: #da573b;
+  border-color: #be5238;
+}
+.social-google:hover {
+  background-color: #be5238;
+  border-color: #9b4631;
+}
+.social-twitter {
+  background-color: #1daee3;
+  border-color: #3997ba;
+}
+.social-twitter:hover {
+  background-color: #3997ba;
+  border-color: #347b95;
+}
+.social-facebook {
+  background-color: #4c699e;
+  border-color: #47618d;
+}
+.social-facebook:hover {
+  background-color: #47618d;
+  border-color: #3c5173;
+}
+.social-linkedin {
+  background-color: #4875B4;
+  border-color: #466b99;
+}
+.social-linkedin:hover {
+  background-color: #466b99;
+  border-color: #3b5a7c;
+}
+/*# sourceMappingURL=Site.min.css.map */
+/*# sourceMappingURL=Site.min.css.map */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.login-input {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.login-input-pass {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.signup-input {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.signup-input-confirm {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.create-account {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.btn-center {
+  width: 50%;
+  text-align: center;
+  margin: inherit;
+}
+.social-login-more {
+  width: 45%;
+}
+/*# sourceMappingURL=Site.min.css.map */
+/*# sourceMappingURL=Site.min.css.map */
+#curriculum .panel-default .panel-title {
+  font-weight: bold;
+}
+#curriculum .panel-default .panel-title.activePanel {
+  color: #FFF;
+}
+#curriculum .panel-default .panel-resume {
+  text-align: justify;
+}
+#curriculum .panel-default .panel-resume .role {
+  margin-left: 12px;
+}
+#curriculum .panel-default .panel-resume .panel-default {
+  border: none;
+}
+#curriculum .panel-default .panel-resume .panel-default .panel-body .list-group-item {
+  border: none;
+}
+#curriculum .panel-default .panel-resume .panel-default .panel-body .row:first-child .col-md-9 {
+  padding-left: 0px;
+}
+#curriculum .panel-default .panel-resume .panel-default .panel-body .row:first-child .col-md-9 h4 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#curriculum .panel-default .panel-resume .panel-default .panel-body .row:first-child .col-md-9 h4 i {
+  background: none;
+}
+#curriculum .panel-default .panel-resume .panel-default .panel-body .row:first-child .col-md-9 h4 i.profile {
+  color: #3279c6;
+}
+#curriculum .panel-default .panel-resume .panel-default .panel-body .row:first-child .col-md-9 h4 i.portfolio {
+  color: #34bd5d;
+}
+#curriculum .panel-default a:hover {
+  text-decoration: none;
+}
+#curriculum .panel-default a:focus {
+  outline: none;
+}
+#curriculum .panel-default a:first-child:hover {
+  color: inherit;
+}
+#curriculum .panel-default a:first-child:focus {
+  color: #4e5d6c;
+}
+#curriculum .panel-default .panel-heading {
+  position: relative;
+  padding: 27px 15px;
+}
+#curriculum .panel-default .panel-heading h4 {
+  position: absolute;
+  top: 20px;
+}
+#curriculum .panel-default .panel-heading .highlighter {
+  height: 55px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0px;
+}
+#curriculum .panel-default .flag {
+  height: 55px;
+  left: -53px;
+  padding-top: 14px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 55px;
+}
+#curriculum .panel-default .flag i {
+  color: #FFF;
+}
+#curriculum .panel-default .profile {
+  background: #3279c6;
+}
+#curriculum .panel-default .resume {
+  background: #c8962f;
+}
+#curriculum .panel-default .portfolio {
+  background: #34bd5d;
+}
+#curriculum .panel-default .contacts {
+  background: #c42323;
+}
+#curriculum .panel-default .panel-body .info .infoLabel {
+  /*color: @text-muted;
+          font-weight: 700;*/
+}
+#curriculum .panel-default .panel-body .panel-heading {
+  padding: 8px 55px;
+}
+#curriculum .panel-default .panel-body .panel-heading i {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  color: #FFF;
+}
+/*# sourceMappingURL=Site.min.css.map */
+@media all and (max-width: 979px) {
+  #sidebar.affix {
+    position: static;
+  }
+}
+/*# sourceMappingURL=Site.min.css.map */

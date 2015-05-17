@@ -1,0 +1,50 @@
+﻿@using MicheleCaggiano.Models
+@model BlogViewModel
+
+<div id="rightbar" class="col-md-3 col-md-push-9" role="complementary">
+  <div id="sidebar">
+    @using (Html.BeginForm("Search", "Blog"))
+    {
+      @Html.AntiForgeryToken()
+      <div class="form-group">
+        <div class="input-group custom-search-form">
+        @Html.TextBoxFor(model => model.TestoRicerca, new { @class = "form-control", placeholder = "Ricerca posts..." })
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit" value="Search">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div><!-- /input-group -->
+        <h4>Filtri ricerca:</h4>
+      </div>
+    }
+
+    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+      <div class="form-group">
+        <h4>Tipologia articoli</h4>
+        <ul class="list-group">
+          <li class="@(Model.TipoArticoli == BlogViewModel.TipologiaArticoli.Tutti ? "list-group-item active":"list-group-item")">
+            @Html.ActionLink("Tutti", "Index", "Blog", new { tipologiaArticoli = BlogViewModel.TipologiaArticoli.Tutti }, null)
+            <span class="badge pull-right">@(Model.Bozze + Model.ArticoliPubblicati)</span>
+          </li>
+          <li class="@(Model.TipoArticoli == BlogViewModel.TipologiaArticoli.Pubblicati ? "list-group-item active":"list-group-item")">
+            @Html.ActionLink("Pubblicati", "Index", "Blog", new { tipologiaArticoli = BlogViewModel.TipologiaArticoli.Pubblicati }, null)
+            <span class="badge pull-right">@Model.ArticoliPubblicati</span>
+          </li>
+          <li class="@(Model.TipoArticoli == BlogViewModel.TipologiaArticoli.Bozze ? "list-group-item active":"list-group-item")">
+            @Html.ActionLink("Bozze", "Index", "Blog", new { tipologiaArticoli = BlogViewModel.TipologiaArticoli.Bozze }, null)
+            <span class="badge pull-right">@Model.Bozze</span>
+          </li>
+        </ul>
+      </div>
+      <div class="form-group">
+        @Html.ActionLink("Nuovo Articolo", "Create")
+      </div>
+      <div class="form-group">
+        @Html.ActionLink("Categorie", "Index", "Categoria")
+        <span class="badge pull-right">@Model.NumeroCategorie</span>
+      </div>
+    }
+  </div>
+</div>

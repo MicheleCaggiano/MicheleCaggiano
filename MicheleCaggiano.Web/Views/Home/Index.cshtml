@@ -1,0 +1,116 @@
+﻿@{
+  ViewBag.Title = "Home Page";
+}
+<!-- CAROUSEL -->
+<div id="carousel-top" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-top" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-top" data-slide-to="1"></li>
+    <li data-target="#carousel-top" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://lorempixel.com/1920/600/business/Slide" alt="...">
+      <div class="carousel-caption">
+        <h1>At vero eos</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://lorempixel.com/1900/600/transport/Slide" alt="...">
+      <div class="carousel-caption">
+        <h1>At vero eos</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://lorempixel.com/1900/600/nature/Slide" alt="...">
+      <div class="carousel-caption">
+        <h1>At vero eos</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      </div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#carousel-top" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-top" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<div class="row">
+  @*<div class="col-md-4">
+      <div><h2>About</h2></div>
+      <p>Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <div><h2>Newsletter</h2></div>
+      <p>Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <form>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Email Address">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Subscribe</button>
+          </span>
+        </div>
+      </form>
+    </div>*@
+  <div class="col-md-8">
+    <h2>Blog Posts</h2>
+    @*<div class="media">
+        <a class="pull-left" href="#">
+          <img src="http://lorempixel.com/g/60/60/business" alt="" />
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Lorem Ipsum</h4>
+          <p>Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id erat.</p>
+        </div>
+      </div>*@
+    @{
+      var blogPosts = ViewBag.BlogPost as List<MicheleCaggiano.Web.Model.Articolo>;
+      if (blogPosts.Count > 0)
+      {
+        foreach (var blog in blogPosts)
+        {
+          <div class="media">
+            <div class="media-body">
+              <a href="@Url.Action("Details", "Blog", new { id = blog.Id })">
+                <h4 class="media-heading">@Html.DisplayFor(modelItem => blog.Titolo)</h4>
+              </a>
+
+              @{
+          HtmlString testo;
+          if (blog.Testo.Length > 400)
+          {
+            testo = new HtmlString(blog.Testo.Substring(0, 400));
+          }
+          else
+          {
+            testo = new HtmlString(blog.Testo);
+          }
+              }
+
+              <article>@testo</article>
+            </div>
+          </div>
+        }
+      }
+    }
+
+  </div>
+  <div class="col-md-4">
+    <h2>Contatti</h2>
+    <address>
+      Email: <a href="mailto:info@michelecaggiano.net">info@michelecaggiano.net</a>
+    </address>
+    <h2>Socials</h2>
+    <p>
+      <a class="btn btn-primary social-login-btn social-linkedin" href="https://www.linkedin.com/profile/view?id=264640301&trk=nav_responsive_tab_profile"><i class="fa fa-linkedin"></i></a>
+      <a class="btn btn-primary social-login-btn social-facebook" href="https://www.facebook.com/michele.caggiano.92/about"><i class="fa fa-facebook"></i></a>
+      <a class="btn btn-primary social-login-btn social-google" href="https://plus.google.com/u/0/102484864881943598581/about"><i class="fa fa-google-plus"></i></a>
+    </p>
+  </div>
+</div>

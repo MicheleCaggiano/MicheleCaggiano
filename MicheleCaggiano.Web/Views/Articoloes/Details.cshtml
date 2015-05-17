@@ -1,0 +1,66 @@
+﻿@model MicheleCaggiano.Web.Model.Articolo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Articolo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titolo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titolo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Testo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Testo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cancellato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cancellato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pubblicato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pubblicato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPubblicazione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPubblicazione)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

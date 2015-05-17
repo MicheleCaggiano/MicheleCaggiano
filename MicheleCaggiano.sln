@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicheleCaggiano", "MicheleCaggiano\MicheleCaggiano.csproj", "{A055C9A2-EFC5-4F4C-8789-E73EEF79D185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicheleCaggiano.Tests", "MicheleCaggiano.Tests\MicheleCaggiano.Tests.csproj", "{D44CA94D-9EE7-4ECA-A8EF-CA8BB8A05C62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicheleCaggiano.Model", "MicheleCaggiano.Model\MicheleCaggiano.Model.csproj", "{4C016A61-86C1-4AF6-8F58-1B3D2E1621F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F70C8744-542C-4FB1-9E95-C3068088284F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicheleCaggiano.MongoModel", "MicheleCaggiano.MongoModel\MicheleCaggiano.MongoModel.csproj", "{CEA563BE-6C27-4D98-89A3-6FD8C9079359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicheleCaggiano.Web", "MicheleCaggiano.Web\MicheleCaggiano.Web.csproj", "{61539291-BDC0-4687-AD75-68C093B6C0EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{0D8EB1BC-7E2B-4019-A984-83D2391CB10D}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://michele-pc:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MicheleCaggiano.Tests\\MicheleCaggiano.Tests.csproj
+		SccProjectName1 = MicheleCaggiano.Tests
+		SccLocalPath1 = MicheleCaggiano.Tests
+		SccProjectUniqueName2 = MicheleCaggiano\\MicheleCaggiano.csproj
+		SccProjectName2 = MicheleCaggiano
+		SccLocalPath2 = MicheleCaggiano
+		SccProjectUniqueName3 = MicheleCaggiano.Model\\MicheleCaggiano.Model.csproj
+		SccProjectName3 = MicheleCaggiano.Model
+		SccLocalPath3 = MicheleCaggiano.Model
+		SccProjectUniqueName4 = MicheleCaggiano.MongoModel\\MicheleCaggiano.MongoModel.csproj
+		SccProjectName4 = MicheleCaggiano.MongoModel
+		SccLocalPath4 = MicheleCaggiano.MongoModel
+		SccProjectUniqueName5 = MicheleCaggiano.Web\\MicheleCaggiano.Web.csproj
+		SccProjectName5 = MicheleCaggiano.Web
+		SccLocalPath5 = MicheleCaggiano.Web
+		SccProjectUniqueName6 = WebApplication1\\WebApplication1.csproj
+		SccProjectName6 = WebApplication1
+		SccLocalPath6 = WebApplication1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A055C9A2-EFC5-4F4C-8789-E73EEF79D185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A055C9A2-EFC5-4F4C-8789-E73EEF79D185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44CA94D-9EE7-4ECA-A8EF-CA8BB8A05C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44CA94D-9EE7-4ECA-A8EF-CA8BB8A05C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44CA94D-9EE7-4ECA-A8EF-CA8BB8A05C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44CA94D-9EE7-4ECA-A8EF-CA8BB8A05C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C016A61-86C1-4AF6-8F58-1B3D2E1621F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C016A61-86C1-4AF6-8F58-1B3D2E1621F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C016A61-86C1-4AF6-8F58-1B3D2E1621F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C016A61-86C1-4AF6-8F58-1B3D2E1621F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C016A61-86C1-4AF6-8F58-1B3D2E1621F9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CEA563BE-6C27-4D98-89A3-6FD8C9079359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA563BE-6C27-4D98-89A3-6FD8C9079359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61539291-BDC0-4687-AD75-68C093B6C0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61539291-BDC0-4687-AD75-68C093B6C0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61539291-BDC0-4687-AD75-68C093B6C0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61539291-BDC0-4687-AD75-68C093B6C0EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8EB1BC-7E2B-4019-A984-83D2391CB10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8EB1BC-7E2B-4019-A984-83D2391CB10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

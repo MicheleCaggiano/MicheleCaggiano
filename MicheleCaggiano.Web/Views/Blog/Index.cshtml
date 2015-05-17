@@ -1,0 +1,88 @@
+﻿@model MicheleCaggiano.Models.BlogViewModel
+
+@{
+  ViewBag.Title = "Blog";
+}
+
+<div class="row">
+  @Html.Partial("_AdminNavbar", Model)
+
+  <div id="articleList" class="col-md-9 col-md-pull-3" role="main">
+    @Html.Partial("_Articles", Model.Articoli)
+  </div>
+  <div id="loading"></div>
+</div>
+
+
+<script type="text/javascript">
+  /* activate sidebar */
+  $('#sidebar').affix();
+
+  /* activate scrollspy menu */
+  var $body = $(document.body);
+  var navHeight = $('.navbar').outerHeight(true) + 10;
+
+  $body.scrollspy({
+    target: '#rightbar',
+    offset: navHeight
+  });
+
+  /* smooth scrolling sections */
+  //$('a[href*=#]:not([href=#])').click(function () {
+  //  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  //    var target = $(this.hash);
+  //    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  //    if (target.length) {
+  //      $('html,body').animate({
+  //        scrollTop: target.offset().top - 50
+  //      }, 1000);
+  //      return false;
+  //    }
+  //  }
+  //});
+
+
+  /*Article lazy loading*/
+  var page = 0;
+  var _inCallback = false;
+
+  function loadArticles() {
+    if (page > -1 && !_inCallback) {
+      _inCallback = true;
+      page++;
+      $('div#loading').html('<p><img src="/Content/Images/loading.gif"></p>');
+
+      $.ajax({
+        url: '/Blog/PostsScroll/',
+        data: { page: page },
+        type: 'GET',
+        success: function (data) {
+          if (data != '') {
+            // add and lay out newly appended elements
+            var container = $("#articleList");
+            container.append(data);
+            container.find(".page" + page)
+              .hide()
+              .fadeIn(500);
+          }
+          else {
+            page = -1;
+          }
+
+          _inCallback = false;
+          $('div#loading').empty();
+        },
+        error: function (xhr, status, exception) {
+          console.log("Error: " + exception + ", Status: " + status);
+        }
+      });
+    }
+  }
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+      loadArticles();
+    }
+  });
+
+</script>

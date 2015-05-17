@@ -1,0 +1,34 @@
+﻿@using MicheleCaggiano.Models
+@model ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+
+<h4>Effettua l'accesso con il tuo account</h4>
+<hr />
+@{
+  var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+  if (loginProviders.Count() > 0)
+  {
+    using (Html.BeginForm(Model.Action, "Account", new { ReturnUrl = Model.ReturnUrl }))
+    {
+      @Html.AntiForgeryToken()
+      <div id="socialLoginList">
+        <p>
+          @foreach (AuthenticationDescription p in loginProviders)
+          {
+            var caption = p.AuthenticationType.ToLower();
+
+            if (caption == "microsoft")
+            {
+              caption = "windows";
+            }
+
+            <button type="submit" class="btn btn-primary social-login-btn social-@caption" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Effettua l'accesso con il tuo account @p.Caption">
+              <i class="fa fa-@caption"></i>
+            </button>
+
+          }
+        </p>
+      </div>
+    }
+  }
+}
